@@ -13,7 +13,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
-    background: #000;
+    /* background: #000; */
+    border-style: #fff;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -122,5 +123,203 @@ header {
 .nav-mobile li a:hover {
     color: var(--primary);
 }
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s;
+    perspective: 1000px;
+}
+
+.banner::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .7),
+        rgba(0, 0, 0, .9)
+    );
+}
+
+.banner .share {
+    position: absolute;
+    top: 45%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 1000;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.banner .share:hover {
+    color: var(--primary);
+}
+
+.banner .share::before {
+    position: absolute;
+    content: '';
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100px;
+    background: #fff;
+}
+
+.triangle {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 30vh;
+    height: 30vh;
+    clip-path: polygon(0 0, 50% 87%, 100% 0);
+    cursor: pointer;
+    z-index: 900;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.triangle-inverse {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(15vh + 5vh);
+    width: 30vh;
+    height: 30vh;
+    clip-path: polygon(0 100%, 50% 13%, 100% 100%);
+    cursor: pointer;
+    z-index: 900;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.triangle.two {
+    left: calc(30vh + 10vh);
+}
+.triangle.three {
+    left: calc(60vh + 20vh);
+}
+.triangle.four {
+    top: calc(30vh + 5vh);
+    left: calc(15vh + 5vh);
+}
+.triangle.five {
+    top: calc(30vh + 5vh);
+    left: calc(45vh + 15vh);
+}
+.triangle.six {
+    top: calc(60vh + 10vh);
+    left: calc(30vh + 10vh);
+}
+.triangle.seven {
+    top: calc(60vh + 10vh);
+    left: calc(60vh + 20vh);
+}
+.triangle-inverse.two {
+    left: calc(45vh + 15vh);
+}
+.triangle-inverse.three {
+    top: calc(30vh + 5vh);
+    left: calc(30vh + 10vh);
+}
+.triangle-inverse.four {
+    top: calc(60vh + 10vh);
+    left: calc(45vh + 15vh);
+}
+.triangle-inverse.five {
+    top: calc(60vh + 10vh);
+    left: calc(75vh + 25vh);
+}
+
+.triangle:hover,
+.triangle-inverse:hover {
+    transform: rotateY(360deg);
+}
+
+.triangle-inverse img,
+.triangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.triangle:hover .flip-card,
+.triangle-inverse:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    color: #fff;
+}
+
+.flip-card-back {
+    background: var(--primary);
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.flip-card-back .play {
+    font-size: 3rem;
+    color: #fff;
+    transition: .5s;
+    transform: scale(1);
+}
+
+.flip-card-back .play:hover {
+    transform: scale(1.5);
+}
+
+.triangle-inverse .flip-card-back {
+    padding-top: 150px;
+    flex-direction: column-reverse;
+}
+
+
+
+
+
+
+
+
 
 
