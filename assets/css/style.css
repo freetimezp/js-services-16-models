@@ -344,11 +344,112 @@ header {
     border: 6px solid var(--primary);
 }
 
+.banner-title {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.banner-title h1 {
+    color: #fff;
+    font-size: 16rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    width: 100%;
+    z-index: 900;
+    font-weight: 800;
+    line-height: .9;
+}
 
+.banner-title .text-special {
+    position: absolute;
+    font-size: 35rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .5;
+    animation: animate 10s linear infinite;
+}
 
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotateY(0deg);
+        color: #fff;
+    }
+    50%{
+        color: var(--primary);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg);
+        color: #fff;
+    }
+}
 
+.banner-title .subtitle {
+    position: relative;
+    color: #fff;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    z-index: 900;
+}
 
+.banner .content {
+    position: absolute;
+    z-index: 1000;
+    bottom: 100px;
+    left: 100px;
+    color: #fff;
+    width: 360px;
+    height: auto;
+}
 
+.banner .content a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.banner .content a:hover {
+    color: var(--primary);
+    gap: 10px;
+}
+
+.banner .content p {
+    opacity: .5;
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    color: #fff;
+    display: flex;
+    list-style: none;
+    z-index: 1000;
+    gap: 40px;
+}
+
+.sci li a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.sci li a:hover {
+    color: var(--primary);
+}
 
 
