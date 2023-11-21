@@ -76,28 +76,28 @@
                 </div>
             </div>
         </div>
-        <div class="triangle four">
+        <div class="triangle four video-container video-2">
             <div class="flip-card">
                 <div class="flip-card-front">
-                    <img src="./assets/images/img-4.jpg" alt="models">
+                    <video src="./assets/videos/trailer-2.mp4" class="video-2" loop autoplay muted></video>
                 </div>
                 <div class="flip-card-back">
                     <p>Lorem ipsum dolor sit</p>
-                    <a href="#" class="play">
+                    <a href="#" class="play" onclick="changeVideo('video-2')">
                         <i class="bx bx-play-circle"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="triangle five">
+        <div class="triangle five video-container video-1">
             <div class="flip-card">
                 <div class="flip-card-front">
-                    <img src="./assets/images/img-5.jpg" alt="models">
+                    <video src="./assets/videos/trailer-1.mp4" class="video-1" loop autoplay muted></video>
                 </div>
                 <div class="flip-card-back">
                     <p>Lorem ipsum dolor sit</p>
-                    <a href="#" class="play">
-                        <i class="bx bx-play-circle"></i>
+                    <a href="#" class="play" onclick="changeVideo('video-1')">
+                        <i class=" bx bx-play-circle"></i>
                     </a>
                 </div>
             </div>
@@ -155,14 +155,14 @@
                 </div>
             </div>
         </div>
-        <div class="triangle-inverse three">
+        <div class="triangle-inverse three video-container video-3 active">
             <div class="flip-card">
                 <div class="flip-card-front">
-                    <img src="./assets/images/img-9.jpg" alt="models">
+                    <video src="./assets/videos/trailer-3.mp4" class="video-3" loop autoplay muted></video>
                 </div>
                 <div class="flip-card-back">
                     <p>Lorem ipsum dolor sit</p>
-                    <a href="#" class="play">
+                    <a href="#" class="play" onclick="changeVideo('video-3')">
                         <i class="bx bx-play-circle"></i>
                     </a>
                 </div>
@@ -193,6 +193,12 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="bg-video-list">
+            <video src="./assets/videos/trailer-1.mp4" class="bg-video video-1" autoplay muted loop></video>
+            <video src="./assets/videos/trailer-2.mp4" class="bg-video video-2" autoplay muted loop></video>
+            <video src="./assets/videos/trailer-3.mp4" class="bg-video video-3 active" autoplay muted loop></video>
         </div>
     </div>
 
